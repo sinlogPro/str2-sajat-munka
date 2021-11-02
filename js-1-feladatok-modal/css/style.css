@@ -1,0 +1,139 @@
+body {
+    _background: rgba(100, 100, 100, 0.5);
+    min-width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    user-select: none; 
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+.modal__content {
+    border: 1px solid black;
+    background-color: #fff;
+    width: 85vw;
+    padding: 1rem 2rem;
+    position: fixed;
+    left: calc(100vw/2);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    animation-name: animate;
+    animation-duration: 1s  
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes eliminate {
+    from {
+        opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+
+@media screen and (min-width: 650px) {
+    .modal__content {
+        width: 50%;
+    }
+}
+
+.modal__header * {
+    font-size: 1.8rem;
+}
+
+.modal__closeButton {
+    _background-color: burlywood;
+    float: right;
+    font-size: 2.3em;
+    padding: .2rem;
+    margin: -1rem;
+    width: 2rem;
+    text-align: center;    
+}
+
+.modal__closeButton:hover {
+    cursor: pointer;
+    background-color: #ddd;
+    border-radius: .2rem;
+}
+
+.modal__text {
+    line-height: 1.5;
+    font-size: .87rem;
+}
+
+.btn__container {
+    _border: 1px solid red;
+    padding-top: 1.5rem;
+    height: 3rem;
+}
+
+.btn {
+    _display: inline-block;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    padding: .6rem 1rem;
+    margin-left: .25rem;
+    /* position: relative;
+    top:0px; */
+    float: right;
+}
+
+.btn__modal-open {
+    color: #000;
+    font-size: 1.1rem;
+    border: none;
+    padding: .6rem 1rem;
+    background-color: #c9c9c9;        
+}
+
+.btn__modal-open:hover {
+    opacity: .8;
+    color: #000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3);
+    cursor: pointer;
+
+}
+
+.btn__modal-open + div {
+    _background-color: aquamarine;
+    margin-top: 1.5em;;
+}
+
+.btn__ok {
+    background-color: rgb(53, 170, 92);
+}
+
+.btn__cancel {
+    background-color: rgb(223, 78, 78);
+}
+
+.btn__ok:hover, .btn__cancel:hover {
+    _background-color: rgba(0, 0, 0, 0.8);
+    opacity: .8;
+    color: #000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3);
+    cursor: pointer;
+}

@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container__main {
+    background-color: rgb(91, 136, 196);
+    align-items: center;
+    padding: 1rem;
+    _max-width: 610px;
+    margin: 5rem;
+}
+
+.container__counter > *{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1rem;;
+}
+
+.container__sumNumberOfClick {
+    float: right;    
+}
+
+.container__sumNumberOfClickLabel {
+    position: absolute;
+    right: 8rem;
+}
+
+
+.container__game {
+    
+    _border: 1px solid red;
+}
+
+.container__cards {
+    _background-color: burlywood;
+    align-items: center;
+    _justify-content: center;
+    _text-align: center;
+    _width: 60vw;
+    _height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* https://www.w3schools.com/howto/howto_css_flip_card.asp */
+.cardbox {
+    background-color: #c0c0c0;
+    flex: 15%;
+    border-radius: .5rem;
+    margin: 0 1vw 0 1vw;
+
+    _width: 5%;
+    height: 25vh;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+}
+
+.cardbox__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+}
+
+.cardbox.fix .cardbox__inner {
+    _background-color: burlywood;
+    transform: rotateY(180deg);
+}
+.cardbox.front .cardbox__inner {
+    _background-color: burlywood;
+    transform: rotateY(180deg);
+}
+
+img{
+    display: none;
+    height: inherit;
+  object-fit: contain;
+}
+
+/* Position the front and back side */
+.card--front, .card--back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+
+    font-size: 8vw;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+   
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .card--front {
+    background-color: rgb(116, 96, 189);
+    color: black;
+}
+
+/* Style the back side */
+.card--back {
+    background-color: rgb(174, 228, 124);
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+

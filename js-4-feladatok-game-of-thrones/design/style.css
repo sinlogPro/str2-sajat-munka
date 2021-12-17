@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Game_of_Thrones';
+    src: url('../fonts/game-of-thrones/Game_of_Thrones.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("../fonts/Outfit/static/Outfit-Regular.ttf") format("truetype");
+
+}
+
+@font-face {
+    font-family: "Merriweather";
+    src: url("../fonts/Merriweather/Merriweather-Regular.ttf") format("truetype");
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+
+.conatiner__main {
+    _background-color: burlywood;
+    display: flex;
+    _gap: 0;
+    _flex-wrap: wrap;
+
+
+}
+
+main {
+    width: 77vw;
+    _width: 50vw;
+
+}
+
+aside {
+    width: 22vw;
+    height: 100vh;
+    _flex: 18%;
+    background-color: #393939;
+    color: #fff;
+    font-family: 'Roboto-Regular', sans-serif;
+    _font-size: .8rem;
+    padding-left: 1.5rem;
+    position: fixed;
+    right: 0px;
+
+}
+
+@media only screen and (max-width: 500px) {
+    .main {
+        width: 50vw;;
+    }
+    .aside {
+        width: 50vw;
+        background-color: darkgreen;
+    }
+  }
+
+aside h1 {
+    font-family: 'Game_of_Thrones', sans-serif;
+    font-weight: lighter;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    text-align: center;
+    margin-top: 2.5rem;
+
+}
+
+.conatiner__main>main {
+    _background-color: aqua;
+}
+
+.container__portraits {
+    background: url("../assets/site/mapblue.jpg");
+    background-size: cover;
+    user-select: none;
+    _background-color: coral;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.container__portrait {
+    flex: 12%;
+    height: 12rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding-top: 2rem;
+    ;
+    _background-color: green;
+    _border: 1px solid red;
+    _width: 550px;
+}
+
+.container__portraittext {
+    font-family: 'Merriweather', serif;
+    font-size: .75rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    _font-variant-caps: all-petite-caps;
+    color: #826A60;
+    font-weight: bold;
+    _user-select: none;
+    cursor: pointer;
+}
+
+.container__portraittext:hover {
+    color: #743a57;
+    font-weight: bolder;
+    font-size: .8rem;
+    letter-spacing: .11rem;
+}
+
+.container__portraittext--active {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: .8rem;
+    letter-spacing: .11rem;
+}
+
+.container__portrait>* {
+    margin: auto;
+    padding: auto;
+}
+
+
+.container__portraits img {
+    border-radius: 99rem;
+    height: 4.5rem;
+}
+
+
+.container__picture {
+    _border: 1px solid red;
+    width: 100%;
+    _height: 2px;
+    
+}
+
+.container__picture img {
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+    padding-right: 0.5rem;
+    _width: 250px;
+    _background-color: darkgoldenrod;
+
+}
+
+.container__nameAndHouses {
+    _border: 1px solid red;
+    margin-top: .6rem;
+    display: block;
+    height: 3rem;
+}
+
+.container__name {
+    display: inline-block;
+    font-size: 1.1rem;
+}
+
+.container__houses {
+    float: right;
+    margin-right: 0.5rem;;
+}
+
+.container__bio {
+    font-family: 'Outfit', serif;
+    font-size: .9rem;
+    margin-right: 0.5rem;;
+}
+
+
+.container__find {
+    position: fixed;
+    display: inline-block;
+    width: fit-content;
+    bottom: 1rem;
+    _border: 1px solid green;
+
+}
+
+.container__form {
+    position: relative;
+    float: right;
+    left: 15px;
+    background-color: #fff;
+    color: #000;
+    padding: 2px 3px 3px;
+}
+
+.container__form ~ i {
+    color: red;
+}
+
+#btn-sidebar {
+    background-color: inherit;
+    color: inherit;
+    border: 1px solid #fff;
+    padding: 4px 6px 1px;
+    border-radius: 3px;
+
+}
+
+#btn-sidebar i {
+    padding: 2px 3px 3px;
+}
+
+#got_search{
+    border: none;
+    outline: none;
+    width: auto;
+}

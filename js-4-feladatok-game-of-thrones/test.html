@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        let data = [{
+                "name": "Jon Snow",
+                "portrait": "assets/jon.png",
+                "picture": "assets/pictures/jon_snow.jpg",
+            },
+            {
+                "name": "Ned Ktark",
+                "portrait": "assets/ned.png",
+                "picture": "assets/pictures/ned_stark.jpg",
+            },
+            {
+                "name": "Mrya Abba",
+                "portrait": "assets/arya.png",
+                "picture": "assets/pictures/arya_stark.jpg",
+            },
+            {
+                "name": "Petyr Baelish",
+                "portrait": "assets/petyr.png",
+                "picture": "assets/pictures/petyr_baelish.jpg",
+                "alias": "littlefinger",
+            },
+            {
+                "name": "Varys",
+                "portrait": "assets/varys.png",
+                "picture": "assets/pictures/varys.jpg",
+            }
+        ];
+
+        const firstNameFinder = (name = '') => {
+            return (name.includes(' ')) ? name.split(' ')[1] : name;
+        }
+
+        let sortByName = (ArrayOfObj) => {
+
+            return ArrayOfObj.sort((a, b) => {
+                const firstData = firstNameFinder(a.name);
+                const secondData = firstNameFinder(b.name);
+                
+                if (firstData < secondData) return -1
+                return firstData > secondData ? 1 : 0
+            });
+        }
+
+        console.log(sortByName(data));
+
+    </script>
+
+
+</body>
+
+</html>
